@@ -1,11 +1,8 @@
 class InputHandler
 
-  new: (game) =>
-    @game = game
-
   key_down: (key) =>
     if @is_quit_sequence key
-      @game.quit!
+      Game.quit!
     else
       print "key dn: #{key}"
 

@@ -1,5 +1,5 @@
-Game = require 'app/game'
+export Game = require 'app/game'
+export InputHandler = require 'app/input_handler'
 
-game = Game!
-game.start!
+Game.start!
 

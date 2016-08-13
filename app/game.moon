@@ -2,10 +2,11 @@ InputHandler = require 'app/input_handler'
 
 class Game
   quit: =>
-    love.event.quit!
+    love.event.push 'quit'
 
-  start: ->
-    @input_handler = InputHandler @
+  start: =>
+    love.quit = =>
+      print "quitting..."
 
     love.keypressed = (key) =>
       InputHandler\key_down key
